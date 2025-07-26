@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
+import Container from "@/components/Container";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,13 +18,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${inter.className} bg-neutral-100 antialiased dark:bg-neutral-700`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+  return <Container className="px-10 md:pt-20 md:pb-10 min-h-screen">{children}</Container>;
 }

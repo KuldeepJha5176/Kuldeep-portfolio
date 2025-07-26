@@ -42,7 +42,7 @@ export const Navbar = () => {
       animate={{
         backdropFilter: scrooled ? "blur(10px)" : "blur(0px)",
         boxShadow: scrooled ? "var(--shadow-custom)" : "none",
-        width:scrooled ? "50%" : "100%",
+        width:scrooled ? "60%" : "100%",
         y: scrooled ? 10:0,
       }}
       transition={{
