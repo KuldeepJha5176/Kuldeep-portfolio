@@ -1,11 +1,12 @@
 import Container from "@/components/Container";
 import { Navbar } from "@/components/navbar";
 import { Projects } from "@/components/Projects";
+import { LandingBlogs } from "@/components/Landing-blogs";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen items-start justify-start">
-      <Container className="min-h-[200vh] p-4 md:pt-20 md:pb-10">
+      <Container className="min-h-[200vh] p-15 md:pt-20 md:pb-10">
         <Navbar />
         <h1 className="text-primary text-2xl font-bold tracking-tight md:text-4xl dark:text-white">
           Kuldeep Jha
@@ -16,6 +17,7 @@ export default function Home() {
           development and contribute to the open-source community.
         </p>
         <Projects />
+        <LandingBlogs />
       </Container>
     </div>
   );

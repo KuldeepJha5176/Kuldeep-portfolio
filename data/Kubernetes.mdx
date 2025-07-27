@@ -1,0 +1,156 @@
+---
+title: "Kubernetes Explained: The What, Why, and How"
+description: "A beginner-friendly introduction to Kubernetes, its architecture, components, and real-world use cases."
+date: "2025-07-26"
+tags: ["Kubernetes", "DevOps", "Containers", "Cloud Native", "Docker"]
+author: "Kuldeep Jha"
+image: "./images/k8s.webp"
+---
+
+import Image from "next/image";
+
+# 🚢 Kubernetes Explained: The What, Why, and How
+
+Whether you're deploying a side project or running services for millions, Kubernetes has become the **de facto standard for container orchestration**.
+
+But what *is* Kubernetes? Why has it become the cornerstone of modern DevOps and cloud-native infrastructure?
+
+Let’s break it down in simple terms.
+
+---
+
+## 🌍 Imagine This...
+
+You’ve built an amazing application using Docker containers. Everything runs smoothly on your local machine. But now you want to deploy it:
+
+- On the cloud
+- With multiple instances
+- With auto-scaling
+- And if a server crashes? It should recover automatically!
+
+Doing this **manually** is a nightmare.
+
+Enter: **Kubernetes**.
+
+---
+
+## 🧠 What is Kubernetes?
+
+**Kubernetes**, often abbreviated as **K8s**, is an **open-source system** for managing containerized applications across multiple machines.
+
+It does for containers what a conductor does for an orchestra — keeps everything **in sync**, **organized**, and **resilient**.
+
+Kubernetes lets you:
+
+- **Deploy** and manage apps easily
+- **Scale** them automatically
+- **Heal** failed components
+- **Rollout** updates with zero downtime
+
+> Originally developed at Google, Kubernetes powers platforms like GKE, Amazon EKS, Azure AKS, and more.
+
+---
+
+## 🤔 Why Use Kubernetes?
+
+| Problem Without K8s | Solved With K8s |
+|---------------------|------------------|
+| Manually managing containers | Automates deployment |
+| No fault tolerance | Self-healing capabilities |
+| IPs keep changing | Service abstraction handles networking |
+| Manual scaling | Built-in horizontal auto-scaling |
+| Tedious rollbacks | Supports automatic rollbacks |
+
+✅ Kubernetes takes care of **orchestration**, so you can focus on building your app, not managing infrastructure.
+
+---
+
+## ⚙️ Core Components of Kubernetes
+
+Let’s go through the key building blocks.
+
+### 🧩 1. **Pod**
+The **smallest unit** in Kubernetes. Think of it as a wrapper around one or more containers that share networking and storage.
+
+### 🖥️ 2. **Node**
+A **worker machine** (VM or physical) where your Pods actually run.
+
+### 🧠 3. **Control Plane**
+The brain of the cluster. It schedules workloads, handles state management, and makes decisions.
+
+### 🛠️ 4. **Deployment**
+Defines your **desired state** — how many replicas, which container image to use, etc. Kubernetes ensures reality matches this state.
+
+### 🔗 5. **Service**
+Provides a **stable endpoint** to access Pods, even if individual Pods die and get replaced.
+
+---
+
+## 🔧 Real-World Use Case Example
+
+Imagine you're building a video streaming platform. Here’s how Kubernetes can help:
+
+- 🗂️ **Microservices**: Video processing, authentication, database all run in separate Pods.
+- ⚖️ **Load balancing**: Services distribute traffic across instances.
+- 🔄 **Zero-downtime updates**: Rolling updates during deployment.
+- 🧠 **Auto-healing**: If a video service Pod crashes, Kubernetes replaces it instantly.
+
+---
+
+## 📦 Sample YAML Manifest (Deployment + Service)
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp-container
+        image: myapp:latest
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: myapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+```
+
+---
+
+## 🔥 Kubernetes in Action
+
+Kubernetes is a complex system, but it’s also incredibly powerful.
+
+Here are some real-world use cases:
+
+- **Google Cloud Platform (GCP)**: GKE, GKE-Autopilot, Cloud Run, Cloud Load Balancing, Cloud Storage, Cloud SQL, and more.
+- **Amazon Web Services (AWS)**: EKS, ECS, Elastic Load Balancing, ECR, RDS, and more.
+- **Microsoft Azure**: AKS, ACR, Azure Load Balancer, Cosmos DB, and more.
+- **DigitalOcean**: Kubernetes, Docker, and more.
+
+---
+
+## 📚 Further Reading
+
+- [Kubernetes Documentation](https://kubernetes.io/docs/home/)
+- [Kubernetes Tutorial](https://kubernetes.io/docs/tutorials/)
+- [Kubernetes Best Practices](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)    

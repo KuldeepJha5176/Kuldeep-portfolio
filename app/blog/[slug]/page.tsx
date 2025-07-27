@@ -26,7 +26,7 @@ export async function generateMetadata(props: { params: { slug: string } }) {
   }
 
   return {
-    title: blog.frontmatter.title,
+    title: blog.frontmatter.title + " by Kuldeep Jha",
     description: blog.frontmatter.description,
   };
 }

@@ -7,19 +7,19 @@ import Link from 'next/link';
     const projects = [
         {
             title: "Consious",
-            description: "Consciousapp: A second brain web app to save and search links, notes, & other media from various sources effortlessly.",
+            description: "Second brain web app for saving and searching links, notes, and media from various sources.",
             href: "/https://concious-frontend.vercel.app/",
             src:"/Conscious.png"
         },
         {
             title: "Fintech",
-            description: " Ftech is a sleek, modern fintech-inspired landing page built using Next.js, TypeScript, and pure CSS—with no external UI libraries or CSS frameworks.",
+            description: " Modern fintech landing page built with Next.js, TypeScript, and pure CSS - no external libraries.",
             src:"/Fintech.png",
             href: "/https://ftech-ten.vercel.app/",
         },
         {
             title: "Claudinary_Saas",
-            description: " A online ai-saas applicaation that lets you do download different aspects ratio images for thumnails,cover,posts in one click and also lets you compress your video size",
+            description: " AI SaaS for one-click image resizing and video compression.",
             src:"/animated-testimonials.jpg",
             href: "/https://cloudinary-saas-ai.netlify.app/",
         }
