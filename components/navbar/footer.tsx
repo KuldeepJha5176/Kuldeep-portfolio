@@ -5,7 +5,7 @@ import Container from '../Container';
 
 const Footer = () => {
   return (
-    <Container className='flex justify-between border-t border-neutral-100 p-3 dark:border-neutral-800'>
+    <Container className='flex justify-between border-t border-neutral-100 px-10 py-3 dark:border-neutral-800'>
       <p className='text-sm text-neutral-500 dark:text-neutral-400'>
       Built with ❤️ by Kuldeep Jha
       </p>

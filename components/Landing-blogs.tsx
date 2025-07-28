@@ -1,6 +1,7 @@
 import React from "react";
 import { getAllBlogs } from "@/utils/mdx";
 import { Link } from "next-view-transitions";
+import SectionHeading from "./SectionHeading";
 
 export const LandingBlogs = async () => {
   const allBlogs = await getAllBlogs();
@@ -10,9 +11,9 @@ export const LandingBlogs = async () => {
   };
   return (
     <div className="">
-      <p className="text-secondary mb-12 max-w-lg  pt-4 text-sm md:text-sm">
+      <SectionHeading delay={0.4} className="pb-6" >
         I love writing about my experiences and learnings.
-      </p>
+      </SectionHeading>
       <div className="flex flex-col gap-4">
         {allBlogs.map((blog, idx) => (
           <Link

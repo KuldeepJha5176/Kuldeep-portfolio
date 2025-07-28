@@ -3,14 +3,14 @@ import { Navbar } from "@/components/navbar";
 import { Collage } from "@/components/collage";
 import { Timeline } from "@/components/timeline";
 
-import  Heading  from "@/components/Heading";
+import Heading from "@/components/Heading";
 import SubHeading from "@/components/subHeading";
+import SectionHeading from "@/components/SectionHeading";
 
 export default function AboutPage() {
   return (
     <div className="flex min-h-screen items-start justify-start">
-      <Container className="min-h-[200vh] p-15 md:pt-20 md:pb-10">
-        
+      <Container className="min-h-screen p-15 md:pt-20 md:pb-10">
         <Heading>About Me </Heading>
         <SubHeading>
           Hi, I'm Kuldeep Jha—a software engineer who loves turning ideas into
@@ -20,10 +20,9 @@ export default function AboutPage() {
           about my experiences, or tinkering with new tools to improve my
           workflow.
         </SubHeading>
-        <p className="text-secondary max-w-lg pt-4 text-sm md:text-base dark:text-white">
-          I love to travel and explore new places. I'm a big fan of nature and
-          love spending time outdoors.
-        </p>
+        <SectionHeading delay={0.2} >
+           I love to travel and explore new places.
+        </SectionHeading>
 
         <Collage />
         <p className="text-secondary max-w-lg pt-4 text-sm md:text-base dark:text-white">
