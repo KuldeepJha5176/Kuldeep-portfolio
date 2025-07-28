@@ -22,7 +22,13 @@ import Link from 'next/link';
             description: " AI SaaS for one-click image resizing and video compression.",
             src:"/animated-testimonials.jpg",
             href: "/https://cloudinary-saas-ai.netlify.app/",
-        }
+        },
+        {
+            title: "Portfolio",
+            description: "Personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.",
+            src:"/animated-testimonials.jpg",
+            href: "#",
+        },
     ];
   return (
     <div className='py-10 '>

@@ -2,10 +2,10 @@
 import React from "react";
 import Container from "../Container";
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from "next-view-transitions";
 import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import { useState } from "react";
-import { s, tr } from "framer-motion/client";
+
 export const Navbar = () => {
   const navItems = [
     {

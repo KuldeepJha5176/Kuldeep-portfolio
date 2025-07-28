@@ -5,6 +5,7 @@ import fs from "fs/promises";
 import path from "path";
 import { Navbar } from "@/components/navbar";
 
+
 export async function generateStaticParams() {
   const files = await fs.readdir(path.join(process.cwd(), "data"));
   return files
@@ -46,13 +47,17 @@ export default async function SingleBlogPage(props: {
 
   return (
     <Container className="min-h-[200vh] px-10 md:pt-10 md:pb-10">
-      <Navbar />
       
+      <img
+        src={frontmatter.image}
+        alt={frontmatter.title}
+        className="max-auto ml-8 mb-20 max-h-96 w-full max-w-2xl rounded-2xl shadow-xl object-cover"
+      />
       <article className="prose dark:prose-invert mx-auto">
-      <h1 className="text-3xl font-bold">{frontmatter.title}</h1>
-      <p className="text-muted mb-6 text-lg">{frontmatter.description}</p>
-        {
-      content}</article>
+        <h1 className="text-3xl font-bold">{frontmatter.title}</h1>
+        <p className="text-muted mb-6 text-lg">{frontmatter.description}</p>
+        {content}
+      </article>
     </Container>
   );
 }
