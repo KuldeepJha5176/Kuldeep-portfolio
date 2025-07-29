@@ -27,7 +27,7 @@ export default async function BlogsPage() {
           efficient web applications. I'm excited to explore the world of web
           development and contribute to the open-source community.
         </SubHeading>
-        <div className="flex flex-col gap-4 py-10">
+        <div className="flex flex-col gap-8 py-10">
           {allBlogs.map((blog, idx) => (
             <MotionDiv
               key={idx}

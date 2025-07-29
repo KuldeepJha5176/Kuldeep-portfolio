@@ -11,11 +11,11 @@ export const LandingBlogs = async () => {
   };
   return (
     <div className="">
-      <SectionHeading delay={0.4} className="pb-6" >
+      <SectionHeading delay={0.4} className="pb-6">
         I love writing about my experiences and learnings.
       </SectionHeading>
-      <div className="flex flex-col gap-4">
-        {allBlogs.map((blog, idx) => (
+      <div className="flex flex-col gap-8">
+        {allBlogs.slice(0, 3).map((blog, idx) => (
           <Link
             key={idx}
             href={`/blog/${blog.slug}`}
@@ -35,7 +35,7 @@ export const LandingBlogs = async () => {
               </p>
             </div>
             <p className="text-secondary max-w-lg pt-2 text-sm dark:text-neutral-400">
-              {truncate(blog.frontmatter?.description || "", 150)}
+              {truncate(blog.frontmatter?.description || "", 120)}
             </p>
           </Link>
         ))}
