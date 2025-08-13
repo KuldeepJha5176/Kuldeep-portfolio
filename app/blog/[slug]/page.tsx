@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import fs from "fs/promises";
 import path from "path";
 import { Navbar } from "@/components/navbar";
+import Scales from "@/components/Scales";
 
 export async function generateStaticParams() {
   const files = await fs.readdir(path.join(process.cwd(), "data"));
@@ -45,11 +46,12 @@ export default async function SingleBlogPage(props: {
   const { content, frontmatter } = blog;
 
   return (
-    <Container className="min-h-screen px-10 md:pt-10 md:pb-10">
+    <Container className="min-h-screen px-8 md:pt-20 md:pb-10">
+      <Scales />
       <img
         src={frontmatter.image}
         alt={frontmatter.title}
-        className="max-auto mb-20 ml-8 max-h-96 w-full max-w-2xl rounded-2xl object-cover shadow-xl"
+        className="max-auto mb-20 ml-20 max-h-96 w-full max-w-2xl rounded-2xl object-cover shadow-xl"
       />
       <article className="prose dark:prose-invert mx-auto">
         <h1 className="text-3xl font-bold">{frontmatter.title}</h1>

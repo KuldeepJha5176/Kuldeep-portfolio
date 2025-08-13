@@ -5,6 +5,7 @@ import { getAllBlogs } from "@/utils/mdx";
 import Heading from "@/components/Heading";
 import SubHeading from "@/components/subHeading";
 import { MotionDiv } from "@/components/Motion-div";
+import Scales from "@/components/Scales";
 
 export const metadata = {
   title: "All blogs-Kuldeep Jha ",
@@ -19,7 +20,8 @@ export default async function BlogsPage() {
   };
   return (
     <div className="flex min-h-screen items-start justify-start">
-      <Container className="min-h-screen p-15 md:pt-20 md:pb-10">
+      <Container className="min-h-screen px-8 md:pt-20 md:pb-10">
+        <Scales />
         <Navbar />
         <Heading>All blogs</Heading>
         <SubHeading>
@@ -27,13 +29,12 @@ export default async function BlogsPage() {
           efficient web applications. I'm excited to explore the world of web
           development and contribute to the open-source community.
         </SubHeading>
-        <div className="flex flex-col gap-8 py-10">
+        <div className="flex flex-col gap-8 py-10 px-4">
           {allBlogs.map((blog, idx) => (
             <MotionDiv
               key={idx}
               initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
-              
-              animate={{ opacity: 1 ,filter: "blur(0px)", y: 0 }}
+              animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
               transition={{
                 duration: 0.3,
                 delay: idx * 0.1,

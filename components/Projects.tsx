@@ -7,13 +7,17 @@ import Link from "next/link";
 import { Project, projects as defaultProjects } from "@/constants/project";
 
 import SectionHeading from "./SectionHeading";
-export const Projects = ({ projects = defaultProjects }: { projects?: Project[] }) => {
+export const Projects = ({
+  projects = defaultProjects,
+}: {
+  projects?: Project[];
+}) => {
   return (
-    <div className="py-10">
-      <SectionHeading delay={0.2} >
+    <div className="shadow-section-inset my-4 border-y border-neutral-100 px-4">
+      <SectionHeading delay={0.2}>
         I'm a software engineer with a passion for building scalable and
         efficient web applications.
-      </SectionHeading >
+      </SectionHeading>
       <div className="grid grid-cols-1 gap-4 py-4 md:grid-cols-3">
         {projects.map((project, idx) => (
           <motion.div

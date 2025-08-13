@@ -24,7 +24,8 @@ export default function RootLayout({
     <ViewTransitions>
     <html lang="en">
       <body
-        className={`${inter.className} bg-neutral-100 antialiased dark:bg-neutral-700`}
+        className={`${inter.className} bg-neutral-100 antialiased 
+        [--pattern-fg:var(--color-neutral-950)]/5 dark:bg-neutral-950 dark:[--pattern-fg:var(--color-white)]/10 selection:bg-blue-500 selection:text-white`}
       >
         <Toaster position="top-center" />
         <Navbar />

@@ -71,11 +71,11 @@ export const Timeline = () => {
   ];
 
   return (
-    <div ref={ref} className="flex flex-col items-start justify-center">
+    <div ref={ref} className="shadow-section-inset border-y border-neutral-100 my-6 px-4 py-4">
       {timeline.map((yearofStudy, idx) => (
         <div key={idx} className="mb-4">
           <motion.h2
-            initial={{ opacity: 0, filter: "blur(10px)" }}  
+            initial={{ opacity: 0, filter: "blur(10px)" }}
             animate={{
               filter: isInView ? "blur(0px)" : "blur(10px)",
               opacity: isInView ? 1 : 0,
@@ -85,7 +85,7 @@ export const Timeline = () => {
               ease: "easeInOut",
               delay: 0.1 * idx,
             }}
-            className="shadow-custom w-fit rounded-md px-2 py-0.5 mb-2 font-bold text-black"
+            className="shadow-custom mb-2 w-fit rounded-md px-2 py-0.5 font-bold text-black"
           >
             {yearofStudy.title}
           </motion.h2>
@@ -95,9 +95,7 @@ export const Timeline = () => {
                 <li key={idx}>
                   <Step className="flex gap-2" idx={idx} isInView={isInView}>
                     <motion.h3
-                    initial={{ opacity: 0, 
-                      y: -10,
-                    }}
+                      initial={{ opacity: 0, y: -10 }}
                       animate={{
                         opacity: isInView ? 1 : 0,
                         y: isInView ? 0 : 10,
@@ -107,7 +105,7 @@ export const Timeline = () => {
                           delay: 0.2 * idx,
                         },
                       }}
-                      className=" text-neutral-800 dark:text-neutral-200"
+                      className="text-neutral-800 dark:text-neutral-200"
                     >
                       {item.title}
                     </motion.h3>

@@ -11,11 +11,13 @@ const Container = ({
   return (
     <div
       className={cn(
-        "mx-auto w-full max-w-4xl bg-white dark:bg-black",
+        "relative mx-auto w-full h-full max-w-4xl bg-white dark:bg-black  ",
         className,
       )}
     >
       {children}
+     
+
     </div>
   );
 };

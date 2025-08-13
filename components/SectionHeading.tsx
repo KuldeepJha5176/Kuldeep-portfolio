@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 const SectionHeading = ({
   children,
@@ -15,10 +15,11 @@ const SectionHeading = ({
     <div>
       <h2
         className={cn(
-          "max-w-lg pt-10 text-sm font-normal md:text-sm",
+          "relative mt-4 w-fit max-w-lg text-sm font-normal md:text-sm",
           className,
         )}
       >
+        <Background />
         {children.split(" ").map((word, idx) => (
           <motion.span
             key={idx}
@@ -37,6 +38,28 @@ const SectionHeading = ({
         ))}
       </h2>
     </div>
+  );
+};
+
+const Background = () => {
+  return (
+    <>
+      <motion.div
+        initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
+        animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+        transition={{
+          duration: 0.3,
+          delay: 1,
+          ease: "easeInOut",
+        }}
+        className="absolute inset-0 h-full w-full scale-[1.04] bg-neutral-100 dark:bg-neutral-800"
+      >
+        <div className="absolute -top-px -left-px h-2 w-2 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-800"></div>
+        <div className="absolute -top-px -right-px h-2 w-2 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-800"></div>
+        <div className="absolute -bottom-px -left-px h-2 w-2 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-800"></div>
+        <div className="absolute -right-px -bottom-px h-2 w-2 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-800"></div>
+      </motion.div>
+    </>
   );
 };
 

@@ -36,11 +36,11 @@ export const Testimonials = () => {
     },
   ];
   return (
-    <div className="py-10">
-        <SectionHeading className="pb-4" delay={0.8}>
-            People love my work
-        </SectionHeading>
-      <div className="flex  [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
+    <div className="shadow-section-inset my-4 border-y border-neutral-100 px-4 py-4">
+      <SectionHeading className="mb-4" delay={0.8}>
+        People love my work
+      </SectionHeading>
+      <div className="flex [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
         <Marquee speed={20} pauseOnHover className="py-4">
           {data.map((item, idx) => (
             <TestimonialCard key={`{testimonial-${idx}`} {...item} />
@@ -61,7 +61,7 @@ const TestimonialCard = ({
   avatar: string;
 }) => {
   return (
-    <div className="shadow-custom mx-4 flex h-50 w-40 w-full max-w-60 flex-col justify-between gap-4 rounded-xl p-4 hover:shadow-md transition duration-300 hover:scale-[1.02]">
+    <div className="shadow-custom mx-4 flex h-50 w-40 w-full max-w-60 flex-col justify-between gap-4 rounded-xl p-4 transition duration-300 hover:scale-[1.02] hover:shadow-md">
       <p className="text-sm text-neutral-700 dark:text-neutral-400">{quote}</p>
       <div className="flex items-center gap-4">
         <img

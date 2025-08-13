@@ -2,8 +2,13 @@
 import React from "react";
 import Container from "../Container";
 import Image from "next/image";
-import {Link} from "next-view-transitions";
-import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
+import { Link } from "next-view-transitions";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import { useState } from "react";
 
 export const Navbar = () => {
@@ -26,41 +31,41 @@ export const Navbar = () => {
     },
   ];
   const [hovered, setHovered] = useState<number | null>(null);
-  const {scrollY} = useScroll();
+  const { scrollY } = useScroll();
   const [scrooled, setScrooled] = useState(false);
   const y = useTransform(scrollY, [0, 100], [0, 10]);
-  const width = useTransform(scrollY, [0, 100], ["80%", "55%"]);
+  const width = useTransform(scrollY, [0, 100], ["65%", "50%"]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-        if (latest > 20) {
-            setScrooled(true);
-        }else{
-            setScrooled(false);
-        }
-        
-    });
+    if (latest > 20) {
+      setScrooled(true);
+    } else {
+      setScrooled(false);
+    }
+  });
   return (
     <Container>
       <motion.nav
-      style={{
-        backdropFilter: scrooled ? "blur(10px)" : "blur(0px)",
-        boxShadow: scrooled ? "var(--shadow-custom)" : "none",
-        width,
-        y
-      }}
-      transition={{
-        duration: 0.3,
-        ease: "linear",
-      }}
-       className=" fixed inset-x-0 top-0  max-w-4xl mx-auto flex items-center justify-between p-2 px-3 py-2 dark:bg-neutral-900 rounded-full  ">
+        style={{
+          backdropFilter: scrooled ? "blur(10px)" : "blur(0px)",
+          boxShadow: scrooled ? "var(--shadow-custom)" : "none",
+          width,
+          y,
+        }}
+        transition={{
+          duration: 0.3,
+          ease: "linear",
+        }}
+        className="fixed inset-x-0 top-0 z-50 mx-auto flex max-w-4xl items-center justify-between rounded-full p-2 px-3 py-2 dark:bg-neutral-900"
+      >
         <Link href="/">
-        <Image
-          className="h-10 w-10 rounded-full"
-          src="/avatar3.jpg"
-          alt="avatar"
-          width={100}
-          height={100}
-        />
+          <Image
+            className="h-10 w-10 rounded-full"
+            src="/avatar3.jpg"
+            alt="avatar"
+            width={100}
+            height={100}
+          />
         </Link>
         <div className="flex items-center gap-4">
           {navItems.map((item, idx) => (

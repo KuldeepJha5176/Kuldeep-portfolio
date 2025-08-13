@@ -10,8 +10,8 @@ export const LandingBlogs = async () => {
     return str.slice(0, n) + "...";
   };
   return (
-    <div className="">
-      <SectionHeading delay={0.4} className="pb-6">
+    <div className="px-4">
+      <SectionHeading delay={0.4} className="mb-4">
         I love writing about my experiences and learnings.
       </SectionHeading>
       <div className="flex flex-col gap-8">
