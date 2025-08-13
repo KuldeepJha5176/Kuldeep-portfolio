@@ -3,7 +3,6 @@ import { getSingleBlog } from "@/utils/mdx";
 import { redirect } from "next/navigation";
 import fs from "fs/promises";
 import path from "path";
-import { Navbar } from "@/components/navbar";
 import Scales from "@/components/Scales";
 
 export async function generateStaticParams() {
@@ -32,11 +31,10 @@ export async function generateMetadata(props: { params: { slug: string } }) {
   };
 }
 
-// Page for a single blog post
 export default async function SingleBlogPage(props: {
   params: { slug: string };
 }) {
-  const { slug } = await props.params; // ✅ await here too
+  const { slug } = await props.params; 
   const blog = await getSingleBlog(slug);
 
   if (!blog) {
