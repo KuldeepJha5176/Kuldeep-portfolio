@@ -1,8 +1,49 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
 import SectionHeading from "./SectionHeading";
+import { toast } from "sonner";
 
 export const Testimonials = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!email) {
+      toast.error("Please enter your email address");
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: "Enquiry from Portfolio",
+          email,
+          message:
+            "Someone is interested in working with you from your portfolio !",
+        }),
+      });
+
+      if (response.ok) {
+        toast.success("Enquiry sent successfully! I'll get back to you soon.");
+        setEmail("");
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const data = [
     {
       quote: `Kuldeep is so great with his work, he is always ready to help out and is a great team player. Highly recommended!`,
@@ -46,6 +87,30 @@ export const Testimonials = () => {
             <TestimonialCard key={`{testimonial-${idx}`} {...item} />
           ))}
         </Marquee>
+      </div>
+      <div className="mt-16">
+        <SectionHeading delay={0.8}>Get in touch</SectionHeading>
+        <p className="text-secondary max-w-lg pt-4 text-sm md:text-base">
+          I'm currently looking for new opportunities. Whether you have a
+          question or want to say hi, hit that button.
+        </p>
+        <form onSubmit={handleSubmit} className="relative mt-4 max-w-lg">
+          <input
+            type="email"
+            placeholder="Your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full rounded-lg bg-white px-4 py-3 pr-[120px] text-sm text-neutral-700 shadow-[var(--shadow-custom)] focus:ring-2 focus:ring-neutral-300 focus:outline-none dark:bg-neutral-800 dark:text-neutral-200"
+            required
+          />
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="absolute top-1/2 right-1 -translate-y-1/2 rounded-md border border-neutral-200 bg-neutral-100 px-4 py-1.5 text-sm text-neutral-700 shadow-[0px_4px_8px_0px_var(--color-neutral-200)_inset] transition-colors hover:bg-neutral-200 disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-200 dark:shadow-[0px_4px_8px_0px_var(--color-neutral-700)_inset]"
+          >
+            {isSubmitting ? "Sending..." : "Send Enquiry"}
+          </button>
+        </form>
       </div>
     </div>
   );
