@@ -13,7 +13,7 @@ export const Projects = ({
   projects?: Project[];
 }) => {
   return (
-    <div className="shadow-section-inset my-4 border-y border-neutral-100 px-4">
+    <div className="shadow-section-inset dark:shadow-section-inset-dark my-4 border-y border-neutral-100 px-4 py-6 dark:border-neutral-800">
       <SectionHeading delay={0.2}>
         I'm a software engineer with a passion for building scalable and
         efficient web applications.

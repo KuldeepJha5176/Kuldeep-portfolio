@@ -71,7 +71,7 @@ export const Timeline = () => {
   ];
 
   return (
-    <div ref={ref} className="shadow-section-inset border-y border-neutral-100 my-6 px-4 py-4">
+    <div ref={ref} className="shadow-section-inset dark:shadow-section-inset-dark my-4 border-y border-neutral-100 px-4 py-6 dark:border-neutral-800">
       {timeline.map((yearofStudy, idx) => (
         <div key={idx} className="mb-4">
           <motion.h2
@@ -85,7 +85,7 @@ export const Timeline = () => {
               ease: "easeInOut",
               delay: 0.1 * idx,
             }}
-            className="shadow-custom mb-2 w-fit rounded-md px-2 py-0.5 font-bold text-black"
+            className="shadow-custom mb-2 w-fit rounded-md px-2 py-0.5 font-bold text-neutral-900 dark:text-neutral-100"
           >
             {yearofStudy.title}
           </motion.h2>
@@ -105,7 +105,7 @@ export const Timeline = () => {
                           delay: 0.2 * idx,
                         },
                       }}
-                      className="text-neutral-800 dark:text-neutral-200"
+                      className="text-neutral-600 dark:text-neutral-400"
                     >
                       {item.title}
                     </motion.h3>

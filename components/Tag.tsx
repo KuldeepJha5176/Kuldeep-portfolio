@@ -23,7 +23,7 @@ const Tag = () => {
 
   return (
     <motion.div
-      className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white/50 px-3 py-1 text-xs text-gray-700"
+      className="text-secondary relative order-first mx-4 mb-2 flex w-fit justify-center overflow-hidden rounded-md px-2 py-0.5 pt-0 text-sm shadow-[var(--shadow-custom)] sm:order-last sm:mx-0 sm:mb-0"
       layout
       animate={{
         backgroundColor: [

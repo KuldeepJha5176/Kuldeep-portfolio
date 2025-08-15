@@ -15,14 +15,10 @@ export default function Home() {
     <div className="flex min-h-screen items-start justify-start">
       <Container className="min-h-screen px-8 md:pt-20 md:pb-10">
         <Scales />
-        <div className="flex flex-col items-start sm:flex-row sm:items-center">
-          <div className="order-last flex items-center sm:order-first">
-            <Heading>Kuldeep Jha</Heading>
-          </div>
-          <div className="order-first flex items-center sm:order-last ">
-            <Tag />
-          </div>
-        </div>
+        <div className="flex flex-col sm:flex-row sm:items-center">
+           <Heading>Kuldeep Jha</Heading>
+           <Tag />
+           </div>
         <SubHeading>
           I'm a software engineer with a passion for building scalable and
           efficient Systems. I'm currently looking for job opportunities.

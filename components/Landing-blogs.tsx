@@ -19,10 +19,10 @@ export const LandingBlogs = async () => {
           <Link
             key={idx}
             href={`/blog/${blog.slug}`}
-            className="hover:border-primary flex flex-col gap-2 rounded-lg border border-neutral-300 p-4 transition duration-200 hover:shadow-md"
+            className="flex flex-col gap-2 rounded-lg bg-white p-4 transition duration-200 hover:bg-neutral-50 hover:shadow-md dark:bg-neutral-900 dark:hover:bg-neutral-800"
           >
             <div className="flex items-center justify-between">
-              <h2 className="text-primary text-base font-bold tracking-tight dark:text-neutral-400">
+              <h2 className="text-primary text-base font-bold tracking-tight dark:text-neutral-200">
                 {blog.frontmatter?.title}
               </h2>
               <p className="text-secondary max-w-lg pt-4 text-sm dark:text-neutral-400">

@@ -158,7 +158,7 @@ const itemVariants = {
 
 const Skills = () => {
   return (
-    <div className="shadow-section-inset my-4 border-y border-neutral-100 px-4 py-8">
+    <div className="shadow-section-inset dark:shadow-section-inset-dark my-4 border-y border-neutral-100 px-4 py-6 dark:border-neutral-800">
       <SectionHeading className="mb-8" delay={0.6}>
         Technologies and tools I work with to build amazing applications
       </SectionHeading>
@@ -183,7 +183,7 @@ const Skills = () => {
                 transition: { type: "spring", damping: 15, stiffness: 400 },
               }}
               whileTap={{ scale: 0.95 }}
-              className="group relative cursor-pointer rounded-xl border border-neutral-200 bg-white p-3 shadow-sm transition-shadow duration-200 hover:shadow-md"
+              className="group relative cursor-pointer rounded-xl border border-neutral-200 bg-white p-3 shadow-sm transition-shadow duration-200 hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900"
             >
               <motion.div
                 className="absolute inset-0 rounded-xl opacity-0 transition-opacity duration-200 group-hover:opacity-5"
@@ -200,17 +200,17 @@ const Skills = () => {
                   <IconComponent />
                 </motion.div>
 
-                <span className="text-xs font-medium text-neutral-700 transition-colors duration-200 group-hover:text-neutral-900 sm:text-sm">
+                <span className="text-xs font-medium text-neutral-700 transition-colors duration-200 group-hover:text-neutral-900 sm:text-sm dark:text-neutral-300 dark:group-hover:text-white">
                   {skill.name}
                 </span>
 
-                <span className="rounded-full bg-neutral-100 px-2 py-1 text-[10px] text-neutral-600 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                <span className="rounded-full bg-neutral-100 px-2 py-1 text-[10px] text-neutral-600 opacity-0 transition-opacity duration-200 group-hover:opacity-100 dark:bg-neutral-800 dark:text-neutral-400">
                   {skill.category}
                 </span>
               </div>
 
               <motion.div
-                className="absolute top-0 right-0 left-0 h-1/3 rounded-t-xl bg-gradient-to-b from-white/20 to-transparent opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                className="absolute top-0 right-0 left-0 h-1/3 rounded-t-xl bg-gradient-to-b from-white/20 to-transparent opacity-0 transition-opacity duration-200 group-hover:opacity-100 dark:from-white/10"
                 initial={false}
               />
             </motion.div>
@@ -225,16 +225,26 @@ const Skills = () => {
         viewport={{ once: true }}
         transition={{ delay: 1.2, duration: 0.6 }}
       >
-        <p className="mb-2 text-sm text-neutral-600">
+        <p className="mb-2 text-sm text-neutral-600 dark:text-neutral-400">
           Full-stack developer with expertise in modern web technologies and
           cloud infrastructure
         </p>
-        <div className="flex flex-wrap justify-center gap-2 text-xs text-neutral-500">
-          <span className="rounded bg-neutral-50 px-2 py-1">Frontend</span>
-          <span className="rounded bg-neutral-50 px-2 py-1">Backend</span>
-          <span className="rounded bg-neutral-50 px-2 py-1">Database</span>
-          <span className="rounded bg-neutral-50 px-2 py-1">DevOps</span>
-          <span className="rounded bg-neutral-50 px-2 py-1">Cloud</span>
+        <div className="flex flex-wrap justify-center gap-2 text-xs text-neutral-500 dark:text-neutral-400">
+          <span className="rounded bg-neutral-50 px-2 py-1 dark:bg-neutral-800 dark:text-neutral-300">
+            Frontend
+          </span>
+          <span className="rounded bg-neutral-50 px-2 py-1 dark:bg-neutral-800 dark:text-neutral-300">
+            Backend
+          </span>
+          <span className="rounded bg-neutral-50 px-2 py-1 dark:bg-neutral-800 dark:text-neutral-300">
+            Database
+          </span>
+          <span className="rounded bg-neutral-50 px-2 py-1 dark:bg-neutral-800 dark:text-neutral-300">
+            DevOps
+          </span>
+          <span className="rounded bg-neutral-50 px-2 py-1 dark:bg-neutral-800 dark:text-neutral-300">
+            Cloud
+          </span>
         </div>
       </motion.div>
     </div>

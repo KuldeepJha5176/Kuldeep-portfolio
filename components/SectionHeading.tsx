@@ -15,7 +15,7 @@ const SectionHeading = ({
     <div>
       <h2
         className={cn(
-          "relative mt-4 w-fit max-w-lg text-sm font-normal md:text-sm",
+          "relative mt-4 w-fit max-w-lg text-sm font-normal md:text-base text-neutral-800 dark:text-neutral-300 ",
           className,
         )}
       >
@@ -52,12 +52,12 @@ const Background = () => {
           delay: 1,
           ease: "easeInOut",
         }}
-        className="absolute inset-0 h-full w-full scale-[1.04] bg-neutral-100 dark:bg-neutral-800"
+        className="absolute inset-0 h-full w-full scale-[1.04] bg-neutral-100 dark:bg-neutral-800 opacity-1"
       >
-        <div className="absolute -top-px -left-px h-2 w-2 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-800"></div>
-        <div className="absolute -top-px -right-px h-2 w-2 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-800"></div>
-        <div className="absolute -bottom-px -left-px h-2 w-2 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-800"></div>
-        <div className="absolute -right-px -bottom-px h-2 w-2 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-800"></div>
+        <div className="absolute -top-px -left-px h-2 w-2 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-700"></div>
+        <div className="absolute -top-px -right-px h-2 w-2 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-700"></div>
+        <div className="absolute -bottom-px -left-px h-2 w-2 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-700"></div>
+        <div className="absolute -right-px -bottom-px h-2 w-2 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-700"></div>
       </motion.div>
     </>
   );
