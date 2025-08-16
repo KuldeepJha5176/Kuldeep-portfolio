@@ -37,7 +37,7 @@ export const Navbar = () => {
     }
   });
 
-  // Initialize theme from storage or system preference
+ 
   useEffect(() => {
     if (typeof window === "undefined") return;
     try {
@@ -51,7 +51,6 @@ export const Navbar = () => {
     } catch {}
   }, []);
 
-  // Watch viewport breakpoint so we can relax width on mobile
   useEffect(() => {
     if (typeof window === "undefined") return;
     const mql = window.matchMedia("(min-width: 768px)");
@@ -88,7 +87,7 @@ export const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <Container className="max-w-full sm:max-w-4xl">
+    <Container className="relative mx-auto h-full w-full max-w-4xl bg-white pt-10 md:pt-0 dark:bg-neutral-900">
       <motion.nav
         style={{
           backdropFilter: scrolled ? "blur(10px)" : "blur(0px)",

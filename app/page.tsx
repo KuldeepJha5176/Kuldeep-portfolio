@@ -13,12 +13,13 @@ import Tag from "@/components/Tag";
 export default function Home() {
   return (
     <div className="flex min-h-screen items-start justify-start">
-      <Container className="min-h-screen px-8 md:pt-20 md:pb-10">
+      <Container className="min-h-screen px-8 pt-10 md:pt-16 md:pb-10">
         <Scales />
+
         <div className="flex flex-col sm:flex-row sm:items-center">
-           <Heading>Kuldeep Jha</Heading>
-           <Tag />
-           </div>
+          <Heading>Kuldeep Jha</Heading>
+          <Tag />
+        </div>
         <SubHeading>
           I'm a software engineer with a passion for building scalable and
           efficient Systems. I'm currently looking for job opportunities.
