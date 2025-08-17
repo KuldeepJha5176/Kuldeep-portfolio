@@ -23,52 +23,58 @@ export default async function BlogsPage() {
       <Container className="min-h-screen px-8 md:pt-20 md:pb-10">
         <Scales />
         <Navbar />
-        <Heading>All blogs</Heading>
-        <SubHeading>
-          I'm a software engineer with a passion for building scalable and
-          efficient web applications. I'm excited to explore the world of web
-          development and contribute to the open-source community.
-        </SubHeading>
-        <div className="shadow-section-inset dark:shadow-section-inset-dark my-4 border-y border-neutral-100 px-4 py-6 dark:border-neutral-800">
-          <div className="flex flex-col gap-8 px-4 py-10">
-            {allBlogs.map((blog, idx) => (
-              <MotionDiv
-                key={idx}
-                initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
-                animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-                transition={{
-                  duration: 0.3,
-                  delay: idx * 0.1,
-                  ease: "easeInOut",
-                }}
-              >
-                <Link
+        <div className="-mx-4 sm:mx-0 sm:px-4">
+          <div className="px-4 sm:px-0">
+            <Heading>All blogs</Heading>
+            <SubHeading>
+              I'm a software engineer with a passion for building scalable and
+              efficient web applications. I'm excited to explore the world of
+              web development and contribute to the open-source community.
+            </SubHeading>
+          </div>
+        </div>
+        <div className="shadow-section-inset dark:shadow-section-inset-dark -mx-4 my-4 border-y border-neutral-100 py-6 sm:mx-0 sm:px-4 dark:border-neutral-800">
+          <div className="px-4 sm:px-0">
+            <div className="flex flex-col gap-8 py-2">
+              {allBlogs.map((blog, idx) => (
+                <MotionDiv
                   key={idx}
-                  href={`/blog/${blog.slug}`}
-                  className="flex flex-col gap-2 rounded-lg p-4 transition duration-200 hover:shadow-md "
+                  initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
+                  animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: idx * 0.1,
+                    ease: "easeInOut",
+                  }}
                 >
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-primary dark:text-neutral-100 text-base font-bold tracking-tight">
-                      {blog.frontmatter?.title}
-                    </h2>
-                    <p className="text-secondary dark:text-neutral-400 max-w-lg pt-2 text-sm">
-                      {new Date(blog.frontmatter?.date!).toLocaleDateString(
-                        "en-us",
-                        {
-                          weekday: "long",
-                          year: "numeric",
-                          month: "short",
-                          day: "numeric",
-                        },
-                      )}
+                  <Link
+                    key={idx}
+                    href={`/blog/${blog.slug}`}
+                    className="flex flex-col gap-2 rounded-lg p-4 transition duration-200 hover:shadow-md"
+                  >
+                    <div className="flex flex-col justify-between md:flex-row md:items-center">
+                      <h2 className="text-primary text-base font-bold tracking-tight dark:text-neutral-100">
+                        {blog.frontmatter?.title}
+                      </h2>
+                      <p className="text-secondary max-w-lg pt-2 text-sm dark:text-neutral-400">
+                        {new Date(blog.frontmatter?.date!).toLocaleDateString(
+                          "en-us",
+                          {
+                            weekday: "long",
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                          },
+                        )}
+                      </p>
+                    </div>
+                    <p className="text-secondary max-w-lg pt-2 text-sm dark:text-neutral-400">
+                      {truncate(blog.frontmatter?.description || "", 150)}
                     </p>
-                  </div>
-                  <p className="text-secondary max-w-lg pt-2 text-sm dark:text-neutral-400">
-                    {truncate(blog.frontmatter?.description || "", 150)}
-                  </p>
-                </Link>
-              </MotionDiv>
-            ))}
+                  </Link>
+                </MotionDiv>
+              ))}
+            </div>
           </div>
         </div>
       </Container>

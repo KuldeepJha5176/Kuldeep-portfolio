@@ -49,7 +49,7 @@ export default async function SingleBlogPage(props: {
       <img
         src={frontmatter.image}
         alt={frontmatter.title}
-        className="max-auto mb-20 ml-20 max-h-96 w-full max-w-2xl rounded-2xl object-cover shadow-xl"
+        className="rouned-full mx-auto mb-20 max-h-96 w-full max-w-2xl rounded-2xl object-cover shadow-xl"
       />
       <article className="prose dark:prose-invert mx-auto">
         <h1 className="text-3xl font-bold">{frontmatter.title}</h1>
