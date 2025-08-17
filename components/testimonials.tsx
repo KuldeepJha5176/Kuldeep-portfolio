@@ -77,7 +77,8 @@ export const Testimonials = () => {
     },
   ];
   return (
-    <div className="shadow-section-inset dark:shadow-section-inset-dark my-4 border-y border-neutral-100 px-4 py-6 dark:border-neutral-800">
+    <div className="shadow-section-inset dark:shadow-section-inset-dark -mx-4 my-4 border-y border-neutral-100 py-6 sm:mx-0 sm:px-4 dark:border-neutral-800">
+      <div className="px-4 sm:px-0">
       <SectionHeading className="mb-4" delay={0.8}>
         People love my work
       </SectionHeading>
@@ -112,6 +113,7 @@ export const Testimonials = () => {
           </button>
         </form>
       </div>
+      </div>  
     </div>
   );
 };

@@ -10,7 +10,7 @@ import Scales from "@/components/Scales";
 export default function AboutPage() {
   return (
     <div className="flex min-h-screen items-start justify-start">
-      <Container className="min-h-screen px-8 md:pt-20 md:pb-10">
+      <Container className="min-h-screen px-8 pt-10 md:pt-16 md:pb-10">
         <Scales />
         <Heading>About Me </Heading>
         <SubHeading>
@@ -26,9 +26,6 @@ export default function AboutPage() {
         </SectionHeading>
 
         <Collage />
-        <SectionHeading delay={0.2} className="mb-4 ml-3">
-          Here's a timeline of my life achievements.
-        </SectionHeading>
         <Timeline />
       </Container>
     </div>
