@@ -16,8 +16,7 @@ export const Projects = ({
     <div className="shadow-section-inset dark:shadow-section-inset-dark -mx-4 my-4 border-y border-neutral-100 py-6 sm:mx-0 sm:px-4 dark:border-neutral-800">
       <div className="px-4 sm:px-0">
         <SectionHeading delay={0.2}>
-          I&apos;m a software engineer with a passion for building scalable and
-          efficient web applications.
+        I love building things
         </SectionHeading>
         <div className="grid grid-cols-1 gap-4 py-4 md:grid-cols-3">
           {projects.map((project, idx) => (
