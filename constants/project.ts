@@ -29,7 +29,7 @@ export const projects: Project[] = [
     title: "Portfolio",
     description:
       "Personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.",
-    src: "/animated-testimonials.jpg",
-    href: "#",
+    src: "/portfolio.png",
+    href: "https://kuldeep-portfolio-bice.vercel.app/",
   },
 ];
