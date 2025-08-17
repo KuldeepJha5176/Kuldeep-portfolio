@@ -14,7 +14,7 @@ type Data = {
     description?: string;
   }>;
 };
-export const Timeline = () => {
+export const Timeline = (Data:Data) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.6 });
 
