@@ -50,7 +50,7 @@ export default async function SingleBlogPage({
   const { content, frontmatter } = blog;
 
   return (
-    <Container className="min-h-screen px-8 md:pt-20 md:pb-10">
+    <Container className="min-h-screen px-8 pt-8 md:pt-20 md:pb-10">
       <Scales />
       <img
         src={frontmatter.image}
