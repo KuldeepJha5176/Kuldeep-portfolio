@@ -21,8 +21,8 @@ export default function Home() {
           <Tag />
         </div>
         <SubHeading>
-          I'm a software engineer with a passion for building scalable and
-          efficient Systems. I'm currently looking for job opportunities.
+          I&apos;m a software engineer with a passion for building scalable and
+          efficient Systems. I&apos;m currently looking for job opportunities.
         </SubHeading>
         <Projects projects={projects.slice(0, 3)} />
         <LandingBlogs />

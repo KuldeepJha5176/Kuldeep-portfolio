@@ -14,9 +14,9 @@ export default function AboutPage() {
         <Scales />
         <Heading>About Me </Heading>
         <SubHeading>
-          Hi, I'm Kuldeep Jha—a software engineer who loves turning ideas into
+          Hi, I&apos;m Kuldeep Jha—a software engineer who loves turning ideas into
           reality through code. I enjoy building robust, user-friendly web
-          applications and am always eager to learn new technologies. When I'm
+          applications and am always eager to learn new technologies. When I&apos;m
           not coding, you can find me exploring open-source projects, writing
           about my experiences, or tinkering with new tools to improve my
           workflow.

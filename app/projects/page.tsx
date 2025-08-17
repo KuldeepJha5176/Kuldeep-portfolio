@@ -11,8 +11,8 @@ export default function ProjectsPage() {
         <Scales />
         <Heading>Kuldeep Jha</Heading>
         <SubHeading>
-          I'm a software engineer with a passion for building scalable and
-          efficient web applications. I'm excited to explore the world of web
+          I&apos;m a software engineer with a passion for building scalable and
+          efficient web applications. I&apos;m excited to explore the world of web
           development and contribute to the open-source community.
         </SubHeading>
         <Projects />

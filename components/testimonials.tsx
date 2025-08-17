@@ -92,7 +92,7 @@ export const Testimonials = () => {
       <div className="mt-16">
         <SectionHeading delay={0.8}>Get in touch</SectionHeading>
         <p className="text-secondary max-w-lg pt-4 text-sm md:text-base">
-          I'm currently looking for new opportunities. Whether you have a
+          I&apos;m currently looking for new opportunities. Whether you have a
           question or want to say hi, hit that button.
         </p>
         <form onSubmit={handleSubmit} className="relative mt-4 max-w-lg">
@@ -113,7 +113,7 @@ export const Testimonials = () => {
           </button>
         </form>
       </div>
-      </div>  
+      </div>
     </div>
   );
 };
