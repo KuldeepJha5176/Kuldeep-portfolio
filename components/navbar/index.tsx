@@ -37,7 +37,6 @@ export const Navbar = () => {
     }
   });
 
- 
   useEffect(() => {
     if (typeof window === "undefined") return;
     try {
@@ -93,7 +92,7 @@ export const Navbar = () => {
           backdropFilter: scrolled ? "blur(10px)" : "blur(0px)",
           boxShadow: scrolled ? "var(--shadow-custom)" : "none",
           width: isMdUp ? (width as unknown as string) : "100%",
-          y,
+          y: isMdUp ? y : 0,
         }}
         transition={{
           duration: 0.3,

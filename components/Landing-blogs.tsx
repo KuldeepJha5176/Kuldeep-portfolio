@@ -10,7 +10,7 @@ export const LandingBlogs = async () => {
     return str.slice(0, n) + "...";
   };
   return (
-    <div className="px-4">
+    <div className=" px-0 md:px-4">
       <SectionHeading delay={0.4} className="mb-4">
         I love writing about my experiences and learnings.
       </SectionHeading>
@@ -19,10 +19,10 @@ export const LandingBlogs = async () => {
           <Link
             key={idx}
             href={`/blog/${blog.slug}`}
-            className="flex flex-col gap-2 rounded-lg bg-white p-4 transition duration-200 hover:bg-neutral-50 hover:shadow-md dark:bg-neutral-900 dark:hover:bg-neutral-800"
+            className="flex flex-col gap-2 rounded-lg bg-white py-4 transition duration-200 hover:bg-neutral-50 hover:shadow-md dark:bg-neutral-900 dark:hover:bg-neutral-800"
           >
-            <div className="flex flex-col justify-between md:flex-row md:items-center ">
-              <h2 className="text-primary text-base  font-bold tracking-tight dark:text-neutral-200">
+            <div className="flex flex-col justify-between md:flex-row md:items-center">
+              <h2 className="text-primary text-base font-bold tracking-tight dark:text-neutral-200">
                 {blog.frontmatter?.title}
               </h2>
               <p className="text-secondary max-w-lg pt-4 text-sm dark:text-neutral-400">

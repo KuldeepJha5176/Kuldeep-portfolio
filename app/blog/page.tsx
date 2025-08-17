@@ -27,8 +27,8 @@ export default async function BlogsPage() {
           <div className="px-4 sm:px-0">
             <Heading>All blogs</Heading>
             <SubHeading>
-              I&apos;m a software engineer with a passion for building scalable and
-              efficient web applications. I&apos;m excited to explore the world of
+              I'm a software engineer with a passion for building scalable and
+              efficient web applications. I'm excited to explore the world of
               web development and contribute to the open-source community.
             </SubHeading>
           </div>
