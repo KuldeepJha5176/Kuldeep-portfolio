@@ -2,16 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  transpilePackages: ["next-mdx -remote"],
+  transpilePackages: ["next-mdx-remote"],
 
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
-  }
-  };
- 
-
+  },
+};
 
 export default nextConfig;

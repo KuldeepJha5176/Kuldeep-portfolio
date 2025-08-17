@@ -24,7 +24,12 @@ export const getSingleBlog = async (slug: string) => {
 
     const { content, frontmatter } = await compileMDX<BlogFrontmatter>({
       source: singleBlog,
-      options: { parseFrontmatter: true },
+      options: { parseFrontmatter: true ,
+        mdxOptions: {
+          remarkPlugins: [],
+          rehypePlugins: [],
+        },
+      },
     });
 
     return { content, frontmatter };

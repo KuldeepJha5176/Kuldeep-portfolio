@@ -14,8 +14,12 @@ export async function generateStaticParams() {
     }));
 }
 
-export async function generateMetadata(props: { params: { slug: string } }) {
-  const { slug } = await props.params;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>; // Change this type
+}) {
+  const { slug } = await params; // Add await here
   const blog = await getSingleBlog(slug);
 
   if (!blog) {
@@ -31,10 +35,12 @@ export async function generateMetadata(props: { params: { slug: string } }) {
   };
 }
 
-export default async function SingleBlogPage(props: {
-  params: { slug: string };
+export default async function SingleBlogPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>; // Change this type
 }) {
-  const { slug } = await props.params; 
+  const { slug } = await params; // Add await here
   const blog = await getSingleBlog(slug);
 
   if (!blog) {
@@ -54,7 +60,9 @@ export default async function SingleBlogPage(props: {
       <article className="prose dark:prose-invert mx-auto">
         <h1 className="text-3xl font-bold">{frontmatter.title}</h1>
         <p className="text-muted mb-6 text-lg">{frontmatter.description}</p>
-        {content}
+
+        {/* ✅ Render MDX content properly */}
+        <div>{content}</div>
       </article>
     </Container>
   );
