@@ -13,6 +13,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Kuldeep Portfolio website",
   description: "A personal portfolio website that showcases my work and skills",
+  icons: {
+    icon: ["/avatar1.jpg"],
+    shortcut: ["/avatar1.jpg"],
+    apple: ["/avatar1.jpg"],
+  },
 };
 
 export default function RootLayout({
