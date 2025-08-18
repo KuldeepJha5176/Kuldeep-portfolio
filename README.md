@@ -68,7 +68,7 @@ pportfolio/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/pportfolio.git
+   git clone https://github.com/KuldeepJha5176/Kuldeep-portfolio.git
    cd pportfolio
    ```
 
