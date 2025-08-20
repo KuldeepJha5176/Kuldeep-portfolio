@@ -5,13 +5,7 @@ export type Project = {
   src: string;
 };
 export const projects: Project[] = [
-  {
-    title: "Portfolio",
-    description:
-      "Personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.",
-    src: "/portfolio.png",
-    href: "https://kuldeep-portfolio-bice.vercel.app/",
-  },
+
   {
     title: "Consious",
     description:
@@ -26,19 +20,27 @@ export const projects: Project[] = [
     href: "https://cloudinary-saas-ai.netlify.app/",
   },
   {
-    title: "Dpin-uptime",
-    description:
-      "its lets you check uptime of your websites and get notifications when your site goes down.",
-      src: "/uptime.webp",
-    href: "https://github.com/KuldeepJha5176/dpin-uptime",
-  },
-  {
     title: "Fintech",
     description:
       " Modern fintech landing page built with Next.js, TypeScript, and pure CSS - no external libraries.",
     src: "/macbook-scroll.png",
     href: "https://ftech-ten.vercel.app/",
   },
+  {
+    title: "Portfolio",
+    description:
+      "Personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.",
+    src: "/portfolio.png",
+    href: "https://kuldeep-portfolio-bice.vercel.app/",
+  },
+  {
+    title: "Dpin-uptime",
+    description:
+      "its lets you check uptime of your websites and get notifications when your site goes down.",
+      src: "/uptime.webp",
+    href: "https://github.com/KuldeepJha5176/dpin-uptime",
+  },
+  
   {
     title: "Landing Page1",
     description:
