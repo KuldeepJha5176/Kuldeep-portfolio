@@ -6,11 +6,31 @@ export type Project = {
 };
 export const projects: Project[] = [
   {
+    title: "Portfolio",
+    description:
+      "Personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.",
+    src: "/portfolio.png",
+    href: "https://kuldeep-portfolio-bice.vercel.app/",
+  },
+  {
     title: "Consious",
     description:
       "Second brain web app for saving and searching links, notes, and media from various sources.",
     href: "https://concious-frontend.vercel.app/",
     src: "/lens.jpg",
+  },
+  {
+    title: "Claudinary_Saas",
+    description: " AI SaaS for one-click image resizing and video compression.",
+    src: "/animated-testimonials.jpg",
+    href: "https://cloudinary-saas-ai.netlify.app/",
+  },
+  {
+    title: "Dpin-uptime",
+    description:
+      "its lets you check uptime of your websites and get notifications when your site goes down.",
+      src: "/uptime.webp",
+    href: "https://github.com/KuldeepJha5176/dpin-uptime",
   },
   {
     title: "Fintech",
@@ -20,16 +40,10 @@ export const projects: Project[] = [
     href: "https://ftech-ten.vercel.app/",
   },
   {
-    title: "Claudinary_Saas",
-    description: " AI SaaS for one-click image resizing and video compression.",
-    src: "/animated-testimonials.jpg",
-    href: "https://cloudinary-saas-ai.netlify.app/",
-  },
-  {
-    title: "Portfolio",
+    title: "Landing Page1",
     description:
-      "Personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.",
-    src: "/portfolio.png",
-    href: "https://kuldeep-portfolio-bice.vercel.app/",
+      "Modern landing page built with Next.js, TypeScript, and tailwind CSS - no external libraries.",
+    src: "/landingpage1.png",
+    href: "https://ladingpage1.vercel.app/",
   },
 ];
